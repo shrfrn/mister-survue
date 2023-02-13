@@ -1,20 +1,24 @@
-
 export default {
     template: `
         <section class="photo-tuner" style="overflow:auto">
-            <div style="float:right">
-                <img :src="imgUrl"  />
-                <button type="button"  @click="reportVal">Done</button>
-            </div>
-            <h4>{{info.label}}</h4>
-            Zoom: <input type="range" min="0.1" max="3" step="0.5" v-model="opts.zoom">
-            <br>
-            Size: <input type="range" min="10" max="400" v-model="opts.size">
-            <br>
-            Angle: <input type="range" min="0" max="360" step="10" v-model="opts.angle">
-            <br>
-            vignette: <input type="range" min="0" max="100" step="10" v-model="opts.vignette">
-            <br>
+            <section class="controls">
+                <h4>{{info.label}}</h4>
+                
+                <label>Zoom:</label>
+                <input type="range" min="0.1" max="3" step="0.5" v-model="opts.zoom">
+                
+                <label>Size:</label>
+                <input type="range" min="10" max="200" v-model="opts.size">
+                
+                <label>Angle:</label>
+                <input type="range" min="0" max="360" step="10" v-model="opts.angle">
+                
+                <label>vignette:</label>
+                <input type="range" min="0" max="100" step="10" v-model="opts.vignette">
+                
+            </section>
+            <img :src="imgUrl"  />
+            <button type="button"  @click="reportVal">Apply</button>
         </section>
         `,
         props: ['info'],

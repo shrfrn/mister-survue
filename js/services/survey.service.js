@@ -26,6 +26,13 @@ const survey =
             }
         },
         {
+            type: 'multiCheck',
+            info: {
+                label: 'Features:',
+                opts: ['Responsive', 'Accurate', 'Resourceful', 'Flexible']
+            }
+        },
+        {
             type: 'selectBox',
             info: {
                 label: 'How was it:',

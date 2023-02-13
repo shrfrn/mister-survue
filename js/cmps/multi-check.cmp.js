@@ -4,8 +4,11 @@ export default {
         <label>
             {{info.label}}
             <label v-for="opt in info.opts">
-                <input @change="reportVal" type="checkbox" :value="opt" v-model="opts">
-                {{opt}}
+                <input 
+                    @change="reportVal" 
+                        type="checkbox" 
+                        :value="opt" 
+                        v-model="opts"> {{opt}}
             </label>
         </label>
     </section>

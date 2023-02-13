@@ -1,12 +1,12 @@
 export default {
     template: `
         <section>
-            <span>
+            <label>
                 {{info.label}}
                 <select v-model="val" @change="reportVal">  
                     <option v-for="opt in info.opts">{{opt}}</option>
                 </select>
-            </span>  
+            </label>  
         </section>
         `,
         props: ['info'],

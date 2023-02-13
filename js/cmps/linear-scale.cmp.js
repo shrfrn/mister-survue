@@ -4,7 +4,7 @@ export default {
             {{info.label}}
             <label v-for="n in info.max" >
                 <input type="radio" :value="n" @change="reportVal" v-model="val">
-                <span>{{n}} &nbsp;&nbsp;</span>
+                <span>{{n}}&nbsp;&nbsp;&nbsp;</span>
             </label>
         </section>
     `,

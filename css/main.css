@@ -21,21 +21,26 @@ form > div {
     padding: 10px;
     margin-block: 10px;
 }
+form > button {
+    display: block;
+    margin-inline-start: auto;
+}
 input {
     accent-color: #333;
 }
-input:not([type=range]), select {
-    padding: 5px 10px;
+input:not([type=range], [type="radio"]), select {
+    padding: 2px 5px;
+    margin-inline-start: 5px;
     transition: 1s;
 }
 
 input:focus, select:focus {
-    background-color: lightcyan;
+    background-color: lightgray;
 }
 
 input[type=radio]:checked + span {
-    color: #666;
-    font-weight: bold;
+    color: whitesmoke;
+    /* font-weight: bold; */
 }
 
 button {
@@ -44,4 +49,24 @@ button {
 }
 button:hover {
     background-color: aqua;
+}
+.photo-tuner {
+    display: flex;
+    gap: 100px;
+}
+.photo-tuner button{
+    align-self: end;
+}
+.photo-tuner .controls {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+.photo-tuner .controls h4{
+    grid-column: 1 / -1;
+}
+pre {
+    padding: 10px;
+    background-color: lightgray;
+    font-size: 1.2em;
+    font-weight: bold;
 }
