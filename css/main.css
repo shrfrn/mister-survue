@@ -24,6 +24,7 @@ form > div {
 form > button {
     display: block;
     margin-inline-start: auto;
+    margin-inline-end: 10px;
 }
 input {
     accent-color: #333;
@@ -44,7 +45,7 @@ input[type=radio]:checked + span {
 }
 
 button {
-    padding: 5px 2em;
+    padding: 2px 2em;
     transition: 0.75s;
 }
 button:hover {
@@ -56,6 +57,7 @@ button:hover {
 }
 .photo-tuner button{
     align-self: end;
+    margin-inline-start: auto;
 }
 .photo-tuner .controls {
     display: grid;
