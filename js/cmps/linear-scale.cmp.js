@@ -16,7 +16,7 @@ export default {
     },
     methods: {
         reportVal() {
-            this.$emit('setVal', this.val)
+            this.$emit('set-val', this.val)
         }
     }
 } 

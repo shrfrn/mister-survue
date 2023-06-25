@@ -15,7 +15,7 @@ export default {
                     <component 
                         :is="cmp.type"  
                         :info="cmp.info" 
-                        @setVal="setAns($event, idx)" />
+                        @set-val="setAns($event, idx)" />
                 </div>
                 <button>Save</button>
             </form>

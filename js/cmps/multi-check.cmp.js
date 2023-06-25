@@ -19,7 +19,7 @@ export default {
     },
     methods: {
         reportVal(){
-            this.$emit('setVal', this.options)
+            this.$emit('set-val', this.options)
         }
     }
 }
