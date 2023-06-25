@@ -1,27 +1,25 @@
 export default {
-    template:`
-    <section>
-        <label>
-            {{info.label}}
-            <label v-for="opt in info.opts">
-                <input 
-                    @change="reportVal" 
-                        type="checkbox" 
-                        :value="opt" 
-                        v-model="opts"> {{opt}}
-            </label>
+    props: ['info'] ,
+    template: `
+    <label> {{info.label}}
+        <label v-for="opt in info.options"> {{opt}}
+            <input 
+                type="checkbox"
+                @change="reportVal"
+                :value="opt"
+                v-model="options">
+            
         </label>
-    </section>
+    </label>
     `,
-    props: ['info'],
-    data(){
+    data() {
         return {
-            opts: []
+            options: [],
         }
     },
-    methods:{
+    methods: {
         reportVal(){
-            this.$emit('setVal', this.opts)
+            this.$emit('setVal', this.options)
         }
     }
 }

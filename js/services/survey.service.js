@@ -29,7 +29,7 @@ const survey =
             type: 'multiCheck',
             info: {
                 label: 'Features:',
-                opts: ['Responsive', 'Accurate', 'Resourceful', 'Flexible']
+                options: ['Responsive', 'Accurate', 'Resourceful', 'Flexible']
             }
         },
         {
