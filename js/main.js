@@ -1,5 +1,5 @@
-import homeCmp from './pages/home.cmp.js'
-import surveyCmp from './pages/survey.cmp.js'
+import HomePage from './pages/HomePage.js'
+import Survey from './pages/Survey.js'
 
 const { createApp } = Vue
 const { createRouter, createWebHashHistory } = VueRouter
@@ -9,11 +9,11 @@ const routerOptions = {
     routes: [
         {
             path: '/',
-            component: homeCmp,
+            component: HomePage,
         },
         {
             path: '/survey',
-            component: surveyCmp,
+            component: Survey,
         },
     ]
 }
