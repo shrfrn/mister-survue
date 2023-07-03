@@ -1,8 +1,8 @@
-import selectBox from '../cmps/select-box.cmp.js'
-import textBox from '../cmps/text-box.cmp.js'
-import linearScale from '../cmps/linear-scale.cmp.js'
-import photoTuner from '../cmps/photo-tuner.cmp.js'
-import multiCheck from '../cmps/multi-check.cmp.js'
+import selectBox from '../cmps/SelectBox.js'
+import textBox from '../cmps/TextBox.js'
+import linearScale from '../cmps/LinearScale.js'
+import photoTuner from '../cmps/PhotoTuner.js'
+import multiCheck from '../cmps/MultiCheck.js'
 
 import { surveyService } from '../services/survey.service.js'
 
