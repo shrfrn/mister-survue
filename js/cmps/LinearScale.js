@@ -1,10 +1,14 @@
 export default {
     template: `
-        <section>
-            {{info.label}}
+        <section class="linear-scale">
+            <span>{{info.label}}</span>
             <label v-for="n in info.max" >
-                <input type="radio" :value="n" @change="reportVal" v-model="val">
-                <span>{{n}}&nbsp;&nbsp;&nbsp;</span>
+                <input 
+                    :value="n" 
+                    @change="$emit('set-val', val)" 
+                    v-model="val"
+                    type="radio">
+                <span>{{ n }}</span>
             </label>
         </section>
     `,
@@ -14,9 +18,4 @@ export default {
             val: '',
         }
     },
-    methods: {
-        reportVal() {
-            this.$emit('set-val', this.val)
-        }
-    }
 } 

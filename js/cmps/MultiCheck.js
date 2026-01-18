@@ -1,25 +1,21 @@
 export default {
     props: ['info'] ,
     template: `
-    <label> {{info.label}}
-        <label v-for="opt in info.options"> {{opt}}
-            <input 
-                type="checkbox"
-                @change="reportVal"
-                :value="opt"
-                v-model="options">
+        <section class="multi-check">
+            <label>{{ info.label }}</label>
             
-        </label>
-    </label>
-    `,
+            <label v-for="opt in info.options"> {{opt}}
+                <input
+                    v-model="options"
+                    @change="$emit('set-val', options)"
+                    :value="opt"
+                    type="checkbox" >
+            
+            </label>
+        </section>`,
     data() {
         return {
             options: [],
         }
     },
-    methods: {
-        reportVal(){
-            this.$emit('set-val', this.options)
-        }
-    }
 }

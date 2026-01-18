@@ -1,9 +1,9 @@
 export default {
     template: `
-        <section>
+        <section class="select-box">
             <label>
-                {{info.label}}
-                <select v-model="val" @change="reportVal">  
+                <span>{{info.label}}</span>
+                <select v-model="val" @change="$emit('set-val', val)">  
                     <option v-for="opt in info.opts">{{opt}}</option>
                 </select>
             </label>  
@@ -15,9 +15,4 @@ export default {
                 val: '',
             }
         },
-        methods: {
-            reportVal() {
-                this.$emit('set-val', this.val)
-            }
-        }
 } 
